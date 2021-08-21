@@ -3,15 +3,7 @@ import { GlobalContext } from "../context/GlobalState"
 
 const Transaction = ({text, amount, id}) => {
 
-    const {transactions} = useContext(GlobalContext)
-    const {setTransactions} = useContext(GlobalContext)
-
-    console.log(transactions)
-
-    const deleteTransaction = (id) => {
-        const newTransactionsList = transactions.filter((t) => t.id !== id)
-        setTransactions(newTransactionsList)
-    }
+    const {transactions, deleteTransaction} = useContext(GlobalContext)
 
     return (
         <>

@@ -1,0 +1,32 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  },
+  "scripts": {
+    "client": "npm start --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malnav/expense-tracker.git"
+  },
+  "author": "malnav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malnav/expense-tracker/issues"
+  },
+  "homepage": "https://github.com/malnav/expense-tracker#readme"
+}

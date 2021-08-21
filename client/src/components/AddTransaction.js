@@ -5,8 +5,7 @@ const AddTransaction = () => {
 
     
 
-    const {transactions} = useContext(GlobalContext)
-    const {setTransactions} = useContext(GlobalContext)
+    const {transactions,addTransactions} = useContext(GlobalContext)
     
     const [text,setText] = useState('')
     const [amount,setAmount] = useState('')
@@ -20,29 +19,12 @@ const AddTransaction = () => {
             alert('Please add a text and amount');
         } else
         {
-            const transaction = {
-              id: generateID(),
-              text: text,
-              amount: +amount
-            }
-            console.log(transaction)
-            const newTransactionsList = [...transactions,transaction]
-            console.log(newTransactionsList)
-            setTransactions(newTransactionsList)
+            addTransactions({text,amount})
             setText('')
             setAmount('')
-             
         }
      
     }
-
-    // Generate random ID
-    function generateID() {
-    return Math.floor(Math.random() * 100000000);
-  }
-
-
-
     return (
         <>
             <h3>Add new transaction</h3>
