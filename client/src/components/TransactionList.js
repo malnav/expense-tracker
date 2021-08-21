@@ -7,9 +7,10 @@ import Transaction from "./Transaction"
 const TransactionList = () => {
     
     const {transactions,getTransactions} = useContext(GlobalContext)
+
     useEffect(() => {
         getTransactions()
-    }, [])    
+    }, [])     // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>

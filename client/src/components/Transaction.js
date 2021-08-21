@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalState"
 
 const Transaction = ({text, amount, id}) => {
 
-    const {transactions, deleteTransaction} = useContext(GlobalContext)
+    const {deleteTransaction} = useContext(GlobalContext)
 
     return (
         <>

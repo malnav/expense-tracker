@@ -5,7 +5,7 @@ const AddTransaction = () => {
 
     
 
-    const {transactions,addTransactions} = useContext(GlobalContext)
+    const {addTransactions} = useContext(GlobalContext)
     
     const [text,setText] = useState('')
     const [amount,setAmount] = useState('')

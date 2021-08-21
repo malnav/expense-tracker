@@ -54,7 +54,7 @@ exports.addTransaction =  async (req,res,next) => {
 exports.deleteTransaction = async (req,res,next) => {
     try {
         
-        const transaction = await Transaction.findByIdAndRemove(req.params.id);
+        const transaction = await Transaction.findById(req.params.id);
         // if !null = true
 
         if(!transaction){
